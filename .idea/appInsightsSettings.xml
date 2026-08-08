@@ -8,10 +8,10 @@
             <InsightsFilterSettings>
               <option name="connection">
                 <ConnectionSetting>
-                  <option name="appId" value="PLACEHOLDER" />
-                  <option name="mobileSdkAppId" value="" />
-                  <option name="projectId" value="" />
-                  <option name="projectNumber" value="" />
+                  <option name="appId" value="com.editoapp.qrpago" />
+                  <option name="mobileSdkAppId" value="1:1044180548315:android:4d28f6927a39dcf785eafe" />
+                  <option name="projectId" value="pagosqr-94e25" />
+                  <option name="projectNumber" value="1044180548315" />
                 </ConnectionSetting>
               </option>
               <option name="signal" value="SIGNAL_UNSPECIFIED" />

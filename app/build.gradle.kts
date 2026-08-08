@@ -2,16 +2,17 @@ plugins {
     alias(libs.plugins.android.application)
     alias(libs.plugins.kotlin.android)
     alias(libs.plugins.kotlin.compose)
+    id("com.google.gms.google-services")
 }
 
 android {
-    namespace = "com.editoapp.qrpagos"
+    namespace = "com.editoapp.qrpago"
     compileSdk {
         version = release(36)
     }
 
     defaultConfig {
-        applicationId = "com.editoapp.qrpagos"
+        applicationId = "com.editoapp.qrpago"
         minSdk = 26
         targetSdk = 36
         versionCode = 1
@@ -43,14 +44,18 @@ android {
 
 dependencies {
 
+
+    implementation(platform("com.google.firebase:firebase-bom:34.12.0"))
+    implementation("com.google.firebase:firebase-messaging")
+    implementation("com.google.firebase:firebase-analytics")
     implementation("com.google.zxing:core:3.5.2")
     implementation("com.journeyapps:zxing-android-embedded:4.3.0")
     implementation("androidx.datastore:datastore-preferences:1.0.0")
+    implementation("androidx.compose.material:material:1.6.8")
 
-
-// Compose BOM (UNA SOLA VEZ)
+// Compose BOM
     implementation(platform(libs.androidx.compose.bom))
-    implementation("com.google.code.gson:gson:2.10.1")
+
 
 // Compose
     implementation(libs.androidx.compose.ui)
@@ -76,4 +81,6 @@ dependencies {
 // Debug
     debugImplementation(libs.androidx.compose.ui.tooling)
     debugImplementation(libs.androidx.compose.ui.test.manifest)
+
+    implementation("com.google.code.gson:gson:2.10.1")
 }
